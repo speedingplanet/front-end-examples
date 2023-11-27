@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Line breaks in HTML</title>
+	</head>
+	<body>
+		<h1>Line breaks in HTML</h1>
+		<!-- Emmet shortcut: div>p -->
+		<div>
+			<h2>Paragraphs</h2>
+			<p>Some text</p>
+			<p>Some more text</p>
+			<p>Some text after that</p>
+			<!-- prettier-ignore -->
+			<p>This paragraph
+			has linebreaks
+			in the source
+			but they won't show up
+			when the browser
+			renders
+			them.
+		</p>
+		</div>
+		<hr />
+		<div>
+			<h2>Break tags</h2>
+			<p>The &lt;br&gt; tag renders as a line break</p>
+			<!-- prettier-ignore -->
+			<p>This paragraph<br>
+				has linebreaks and break tags<br>
+				in the source<br>
+				so they will show up<br>
+				when the browser<br>
+				renders<br>
+				them.<br>
+			</p>
+		</div>
+		<hr />
+		<div>
+			<h2>Preformatted text</h2>
+			<pre>
+This text
+Will be formatted
+and save line breaks
+as well
+			as
+				white
+					space.
+		</pre
+			>
+		</div>
+		<hr />
+		<div>
+			<h2>Blockquote</h2>
+			<p>There's a block quote below:</p>
+			<blockquote>Be curious, not judgemental</blockquote>
+		</div>
+	</body>
+</html>
