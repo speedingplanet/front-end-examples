@@ -34,6 +34,30 @@
 				</div>
 			</div>
 			<div class="input-container">
+				<div><span>Text input (aria-label)</span></div>
+				<!-- Almost always want a name, might need an id if you're using JavaScript -->
+				<div>
+					<input
+						type="text"
+						name="text-input-name"
+						id="text-input-id"
+						aria-label="Some text input"
+					/>
+				</div>
+			</div>
+			<div class="input-container">
+				<div><span id="span-as-label">Text input (aria-labelledby)</span></div>
+				<!-- Almost always want a name, might need an id if you're using JavaScript -->
+				<div>
+					<input
+						type="text"
+						name="text-input-name"
+						id="text-input-id"
+						aria-labelledby="span-as-label"
+					/>
+				</div>
+			</div>
+			<div class="input-container">
 				<div><label for="number-input-id">Number input</label></div>
 				<div>
 					<input
