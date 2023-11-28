@@ -7,25 +7,113 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>HTML Lists</title>
+		<style>
+			ul.orange-bullets li::marker {
+				color: orange;
+			}
+
+			ul li::marker {
+				color: green;
+			}
+
+			@counter-style arrows {
+				system: cyclic;
+				symbols: ⬆️ ↗️ ➡️ ↘️ ⬇️;
+				suffix: ' '; /* Default value is a '.' */
+			}
+
+			.custom-numbers {
+				list-style: arrows;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>HTML Lists</h1>
+		<section>
+			<h2>Standard lists</h2>
+			<div>
+				<h3>Unordered List</h3>
+				<ul>
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+					<li>Item 4</li>
+				</ul>
+			</div>
+			<div>
+				<h3>Ordered List</h3>
+				<ol>
+					<li>Item</li>
+					<li>Item</li>
+					<li>Item</li>
+					<li>Item</li>
+				</ol>
+			</div>
+		</section>
+		<hr />
+		<section>
+			<h2>Styled lists</h2>
+			<div>
+				<h3>Unordered list bullets</h3>
+				<ul style="list-style-type: circle">
+					<li><code>list-style-type: circle</code></li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+					<li>Item 4</li>
+				</ul>
+				<ul style="list-style-type: '🔥'">
+					<li>list-style-type: '🔥'</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+					<li>Item 4</li>
+				</ul>
+				<ul style="list-style-image: url('/images/x-logo.png')">
+					<li><code>list-style-image: url('/images/x-logo.png')</code></li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+					<li>Item 4</li>
+				</ul>
+				<ul class="orange-bullets">
+					<li>
+						Use the
+						<code>li::marker</code>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">
+							pseudo-element
+						</a>
+						to color only the bullet
+					</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+					<li>Item 4</li>
+				</ul>
+			</div>
+		</section>
 		<div>
-			<h2>Unordered Lists</h2>
-			<!-- ul>li*3 -->
-			<ul>
-				<li>Apples</li>
-				<li>Bananas</li>
-				<li>Pears</li>
-			</ul>
-
-			<h2>Ordered Lists</h2>
+			<h3>Ordered Lists</h2>
 			<!-- ol>li*4{Position $} -->
-			<ol>
-				<li>Position 1</li>
-				<li>Position 2</li>
-				<li>Position 3</li>
-				<li>Position 4</li>
+			<ol style="list-style-type: upper-roman">
+				<li><code>list-style-type: upper-roman</code></li>
+				<li>Item</li>
+				<li>Item</li>
+				<li>Item</li>
+			</ol>
+
+			<ol style="list-style-type: lower-greek">
+				<li><code>list-style-type: lower-greek</code></li>
+				<li>Item</li>
+				<li>Item</li>
+				<li>Item</li>
+			</ol>
+
+			<ol class="custom-numbers">
+				<li>Custom icons</li>
+				<li>Using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style">@counter-style</a> at-rule</li>
+				<li>Item</li>
+				<li>Item</li>
+				<li>Item</li>
+				<li>Item</li>
+				<li>Item</li>
+				<li>Item</li>
 			</ol>
 		</div>
 	</body>

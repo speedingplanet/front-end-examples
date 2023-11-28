@@ -1,17 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>HTML Anchor tags</title>
-</head>
-<body>
-	<h1>Different kinds of anchors</h1>
-	<ul>
-		<li>Relative link (no starting /): <a href="html-experiments.html">HTML Experiments</a></li>
-		<li>Absolute link (starts with a /): <a href="/nested/content/absolute.html">Absolute reference</a></li>
-		<li>External link (starts with a protocol, like http:// or https://):<a href="https://intuit.com">Intuit</a></li>
-	</ul>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>HTML Anchor tags</title>
+	</head>
+	<body>
+		<h1>Different kinds of anchors</h1>
+		<div>
+			<h2>Anchors to different pages</h2>
+			<ul>
+				<!-- <a href="url">Text for the link</a> -->
+				<li>
+					Relative link (no starting /):
+					<br />
+					<code>&lt;a href=&quot;line-breaks.html&quot;&gt;Line Breaks&lt;/a&gt;</code>
+					<br />
+					<a href="line-breaks.html">Line Breaks</a>
+				</li>
+				<li>
+					Relative link (with path info):
+					<br />
+					<code>&lt;a href=&quot;nested/path.html&quot;&gt;Path&lt;/a&gt;</code>
+					<br />
+					<a href="nested/path.html">Path</a>
+				</li>
+				<li>
+					Relative link (up and out of this directory):
+					<br />
+					<code>&lt;a href=&quot;../css/index.html&quot;&gt;CSS&lt;/a&gt;</code>
+					<br />
+					<a href="../css/index.html">CSS</a>
+					<br />
+				</li>
+				<li>
+					Absolute link (starts with a /):
+					<br />
+					<code>&lt;a href=&quot;/html/nested/path.html&quot;&gt;Absolute reference&lt;/a&gt;</code>
+					<br />
+					<a href="/html/nested/path.html">Absolute reference</a>
+					<br />
+				</li>
+				<li>
+					External link (starts with a protocol, like http:// or https://):
+					<br />
+					<code>&lt;a href=&quot;https://intuit.com&quot;&gt;Intuit&lt;/a&gt;</code>
+					<br />
+					<a href="https://intuit.com">Intuit</a>
+					<br />
+				</li>
+			</ul>
+		</div>
+		<div>
+			<h2>Anchors to specific parts of a page</h2>
+			<p>
+				<a
+					href="#land-here"
+					id="back-to-top"
+				>
+					Link
+				</a>
+				to the bottom
+			</p>
+			<div style="height: 100vh; padding: 10vh 0; border: 2px black solid">
+				<p>A large block so we have to scroll off screen</p>
+			</div>
+			<p id="land-here">Clicking on the link above should land here.</p>
+			<p><a href="#back-to-top">Go back</a></p>
+			<div style="height: 100vh; padding: 10vh 0; border: 2px black solid">
+				<p>Another spacer to scroll the target "Go back" to the top of the viewport.</p>
+			</div>
+		</div>
+	</body>
 </html>
