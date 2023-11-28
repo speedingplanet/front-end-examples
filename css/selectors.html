@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>CSS Selectors</title>
+		<style>
+			/* CSS nomenclature */
+			/* selector {
+				declaration;
+				property: value
+			}
+			*/
+
+			/* Ways to select parts of the page in CSS */
+
+			/* Tags */
+			li {
+				color: blue;
+			}
+
+			/* Classes  <p class="headline"></p> */
+			.headline {
+				font-size: 150%;
+				text-decoration: underline;
+			}
+
+			/* IDs <p id="first-graf"></p> */
+			#first-graf {
+				text-align: center;
+			}
+
+			/* attributes <input type="text"/> */
+			/* Has the attribute, regardless of value */
+			[type] {
+				color: green;
+			}
+
+			/* Has the attribute, value must be "text" */
+			[type='text'] {
+				color: green;
+			}
+
+			/* Only applies to p with the class headline */
+			/* NOT to all paragraphs */
+			/* NOT to anything with the class headline */
+			p.headline {
+				text-indent: 5%;
+			}
+		</style>
+	</head>
+	<body></body>
+</html>
