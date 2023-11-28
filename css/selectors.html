@@ -8,15 +8,18 @@
 		/>
 		<title>CSS Selectors</title>
 		<style>
-			/* CSS nomenclature */
-			/* selector {
-				declaration;
-				property: value
+			#foo /* selector */ {
+				/* The whole line is a declaration */
+				font-size: 1.5rem;
+
+				/* property: value */
+				color: blue;
 			}
-			*/
+			/* The entire unit, from selector to the last } is a "ruleset" */
 
 			/* Ways to select parts of the page in CSS */
 
+			/* 4 types of selectors: tags, .classes, #ids, and [attributes]
 			/* Tags */
 			li {
 				color: blue;
@@ -44,13 +47,139 @@
 				color: green;
 			}
 
-			/* Only applies to p with the class headline */
-			/* NOT to all paragraphs */
-			/* NOT to anything with the class headline */
+			/* Begins with 'text' */
+			[type^='text'] {
+				color: green;
+			}
+
+			/* Ends with 'text' */
+			[type$='text'] {
+				color: green;
+			}
+
+			/* Contains 'text' anywhere */
+			/* matches type="pretext" and type="text number" */
+			[type*='text'] {
+				color: green;
+			}
+
+			/* Contains the word text */
+			/* matches type="text number" DOES NOT MATCH type="pretext" */
+			[type~='text'] {
+				color: green;
+			}
+
+			/* Combining atoms */
 			p.headline {
-				text-indent: 5%;
+				color: green;
+			}
+			input[type='text'] {
+				color: green;
+			}
+			#navbar.highlighted {
+				color: green;
+			}
+			input.active[type='checkbox'] {
+				color: green;
+			}
+
+			/* multiple classes */
+			/* Must have all three classes for this to trigger */
+			/* WORKS: <div class="alpha beta gamma"></div> */
+			/* WORKS: <div class="beta alpha gamma"></div> */
+			/* WORKS: <div class="alpha beta gamma delta"></div> */
+			/* DOES NOT WORK: <div class="alpha beta"></div> */
+			/* Like a logical AND, only for classes */
+			.alpha.beta.gamma {
+				color: green;
+			}
+
+			/* apply to move than one selector */
+			/* Like a logical OR */
+			h1, /* OR */
+			h2, /* OR */
+			h3, /* OR */
+			h4, /* OR */
+			h5, /* OR */
+			h6 {
+				color: orange;
+			}
+
+			input[type='radio'],
+			input[type='checkbox'] {
+				border: 2px black solid;
+			}
+
+			/* Be careful with using multiple classes */
+			.alpha,
+			.beta,
+			.gamma {
+				color: blue;
+			}
+
+			/*  Not the same as the above! */
+			.alpha.beta.gamma {
+				color: blue;
+			}
+
+			/* Relationships */
+			/* Parent to child */
+			ul > li {
+				color: blue;
+			}
+			/* Would not apply to li elements under an ordered list! */
+
+			ol > li {
+				color: red;
+			}
+
+			/* ancestor to descendant */
+			div p {
+				color: green;
+			}
+			/*
+			<div>
+				<ul>
+					<li>
+						<p>Matches!</p>
+					</li>
+				</ul>
+			</div>
+			*/
+
+			/* siblings */
+			/* immediate next sibling ONLY */
+			#center-item + li {
+				text-decoration: solid underline;
+			}
+
+			/* All following siblings */
+			#center-item ~ li {
+				font-weight: bold;
+			}
+
+			/* Pseudo-classes and pseudo-elements */
+			/* Pseudo classes add to the possibilities for selection */
+			input[type='text']:invalid {
+				border: 2px red dashed;
+			}
+
+			/* Pseudo elements allow you to subselect parts of an element
+				 like the first line of a paragraph, or the bullet of an unordered list */
+			li::marker {
+				color: green;
 			}
 		</style>
 	</head>
-	<body></body>
+	<body>
+		<div class="alpha beta">This has more than one class.</div>
+		<ul>
+			<li>First</li>
+			<li>Second</li>
+			<li id="center-item">Third</li>
+			<li>Fourth</li>
+			<li>Fifth</li>
+			<li>Sixth</li>
+		</ul>
+	</body>
 </html>
