@@ -12,10 +12,6 @@
 				color: orange;
 			}
 
-			ul li::marker {
-				color: green;
-			}
-
 			@counter-style arrows {
 				system: cyclic;
 				symbols: ⬆️ ↗️ ➡️ ↘️ ⬇️;
@@ -62,7 +58,7 @@
 					<li>Item 4</li>
 				</ul>
 				<ul style="list-style-type: '🔥'">
-					<li>list-style-type: '🔥'</li>
+					<li><code>list-style-type: '🔥'</code></li>
 					<li>Item 2</li>
 					<li>Item 3</li>
 					<li>Item 4</li>
@@ -89,7 +85,7 @@
 			</div>
 		</section>
 		<div>
-			<h3>Ordered Lists</h2>
+			<h3>Ordered Lists</h3>
 			<!-- ol>li*4{Position $} -->
 			<ol style="list-style-type: upper-roman">
 				<li><code>list-style-type: upper-roman</code></li>
@@ -107,7 +103,15 @@
 
 			<ol class="custom-numbers">
 				<li>Custom icons</li>
-				<li>Using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style">@counter-style</a> at-rule</li>
+				<li>
+					Using the
+					<code>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style">
+							@counter-style
+						</a>
+					</code>
+					at-rule
+				</li>
 				<li>Item</li>
 				<li>Item</li>
 				<li>Item</li>
