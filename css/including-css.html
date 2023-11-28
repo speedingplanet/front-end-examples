@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Including CSS</title>
+		<!-- 
+			Reusable on any HTML page that wants it
+			Might have wide-ranging effects when used across many pages
+			Easy to set styles for any page that uses it
+			Requires an additional HTTP request (minor)
+		 -->
+		<link
+			rel="stylesheet"
+			href="including-css.css"
+		/>
+		<!-- 
+			Reusable throughout the page, possibly faster to load, 
+			not reusable across pages 
+		-->
+		<style>
+			/* tag:pseudo-class */
+			li:nth-of-type(2) {
+				color: green;
+				font-family: monospace;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Including CSS</h1>
+		<p>Different ways to include CSS in a web page.</p>
+
+		<ul>
+			<!-- Not reusable, overrides any other style directives -->
+			<li style="text-decoration: underline">
+				This list item is styled with the
+				<code>[style]</code>
+				attribute
+			</li>
+			<li>This list item is styled with an inline style block</li>
+			<li>This list item is styled with a separate stylesheet file</li>
+		</ul>
+	</body>
+</html>
