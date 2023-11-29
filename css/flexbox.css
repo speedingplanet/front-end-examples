@@ -1,0 +1,101 @@
+.container {
+	border: 2px green dashed;
+	padding: 10px;
+	display: flex;
+}
+
+.item {
+	border: 2px red dotted;
+	height: 100px;
+	min-width: 100px;
+}
+
+.container > div {
+	flex: 1;
+}
+
+.container.shrink > .item {
+	flex-basis: 300px;
+}
+
+.container.combined > .item {
+	flex: 1 1;
+}
+
+.container.wrap {
+	width: 50%;
+	flex-wrap: wrap;
+}
+
+.justification .item {
+	width: 100px;
+	height: 100px;
+	flex: 0;
+}
+
+.justify-flex-end {
+	justify-content: flex-end;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+.space-evenly {
+	justify-content: space-evenly;
+}
+
+.alignment > .container {
+	height: 300px;
+}
+
+.alignment .item:nth-child(odd) {
+	height: 200px;
+}
+
+.align-flex-end {
+	align-items: flex-end;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.align-stretch {
+	align-items: stretch;
+}
+
+/* align-items:stretch won't work if the items have a pre-set height */
+.container.align-stretch .item {
+	height: unset;
+}
+
+.align-baseline {
+	align-items: baseline;
+}
+
+.align-baseline .item:nth-child(even) {
+	padding-top: 50px;
+}
+
+.container.column {
+	height: 400px;
+	flex-wrap: wrap;
+	flex-direction: column;
+	/* cross-axis alignment */
+	align-content: flex-start;
+	gap: 5px 10px;
+}
+
+.container.column > .item {
+	flex-basis: 150px;
+	width: 150px;
+}

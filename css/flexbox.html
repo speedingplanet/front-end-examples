@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Flexbox</title>
+		<link
+			rel="stylesheet"
+			href="flexbox.css"
+		/>
+	</head>
+	<body>
+		<h1>Flexbox</h1>
+		<section>
+			<h2>Minimal flexbox</h2>
+			<div class="container">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+		</section>
+		<section>
+			<h2>Increased flex-grow</h2>
+			<div class="container">
+				<div class="item">1</div>
+				<div
+					class="item"
+					style="flex-grow: 2"
+				>
+					2
+				</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+		</section>
+		<section>
+			<h2>Increased flex-shrink + flex-basis</h2>
+			<div class="container shrink">
+				<div class="item">1</div>
+				<div
+					class="item"
+					style="flex-shrink: 2"
+				>
+					2
+				</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+		</section>
+		<section>
+			<h2>Combined shorthand</h2>
+			<div class="container combined">
+				<div class="item">1</div>
+				<!-- Double-size, don't forget to re-establish flex-basis -->
+				<div
+					class="item"
+					style="flex: 2 0 250px"
+				>
+					2
+				</div>
+				<div class="item">3</div>
+				<!-- Won't shrink, minimum width of 150px -->
+				<div
+					class="item"
+					style="flex: 1 0 150px"
+				>
+					4
+				</div>
+				<div class="item">5</div>
+			</div>
+		</section>
+		<section>
+			<h2>Wrapping</h2>
+			<div class="container wrap">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+		</section>
+		<section class="justification">
+			<h2>Justification</h2>
+			<h3>Flex-start</h3>
+			<div class="container">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+			<h3>Flex-end</h3>
+			<div class="container justify-flex-end">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+			<h3>Center</h3>
+			<div class="container justify-center">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+			<h3>Space Between</h3>
+			<div class="container space-between">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+			<h3>Space Around</h3>
+			<div class="container space-around">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+			<h3>Space Evenly</h3>
+			<div class="container space-evenly">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+		</section>
+		<section class="alignment">
+			<h2>Align Items</h2>
+			<h3>Flex-start</h3>
+			<div class="container">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+			<h3>Flex-end</h3>
+			<div class="container align-flex-end">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+			<h3>Center</h3>
+			<div class="container align-center">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+			<h3>Stretch</h3>
+			<div class="container align-stretch">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+			<h3>Baseline</h3>
+			<div class="container align-baseline">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+		</section>
+		<section>
+			<h2>Column</h2>
+			<div class="container column">
+				<div class="item">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+				<div class="item">4</div>
+				<div class="item">5</div>
+			</div>
+		</section>
+	</body>
+</html>
