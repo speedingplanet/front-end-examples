@@ -27,3 +27,4 @@ dist-ssr
 experiments/*
 !experiments/index.html
 !experiments/add*
+!experiments/finished/
