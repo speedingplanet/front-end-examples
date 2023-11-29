@@ -28,3 +28,4 @@ experiments/*
 !experiments/index.html
 !experiments/add*
 !experiments/finished/
+!experiments/*.csv
