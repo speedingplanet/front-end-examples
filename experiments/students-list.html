@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Students List</title>
+	</head>
+	<body>
+		<h1>List of all students</h1>
+		<!-- 
+How can I render a bunch of records into grid or table in HTML?
+
+HTML tables
+CSS Grid
+Flexbox
+
+1,Bernete,O'Scully,Beausejour,Manitoba,Canada
+2,Catherin,Yon,Huntington,West Virginia,United States
+3,Deni,Bushell,Atlanta,Georgia,United States
+4,Louie,Warke,Honolulu,Hawaii,United States
+5,Cheston,Endicott,Lincoln,Nebraska,United States
+
+###########################################################
+Each row is a div, each cell in the row is a div
+###########################################################
+<div class="row-container">
+	<div class="row">
+		<div class="cell">1</div>
+		<div class="cell">Bernete</div>
+		<div class="cell">O'Scully</div>
+		<div class="cell">Beausejour</div>
+		<div class="cell">Manitoba</div>
+		<div class="cell">Canada</div>
+	</div>
+	<div class="row">
+		<div class="cell">2</div>
+		<div class="cell">Catherin</div>
+		<div class="cell">Yon</div>
+		<div class="cell">Huntington</div>
+		<div class="cell">West Virginia</div>
+		<div class="cell">United States</div>
+	</div>
+	<div class="row">
+		<div class="cell">3</div>
+		<div class="cell">Deni</div>
+		<div class="cell">Bushell</div>
+		<div class="cell">Atlanta</div>
+		<div class="cell">Georgia</div>
+		<div class="cell">United States</div>
+	</div>
+	<div class="row">
+		<div class="cell">4</div>
+		<div class="cell">Louie</div>
+		<div class="cell">Warke</div>
+		<div class="cell">Honolulu</div>
+		<div class="cell">Hawaii</div>
+		<div class="cell">United States</div>
+	</div>
+	<div class="row">
+		<div class="cell">5</div>
+		<div class="cell">Cheston</div>
+		<div class="cell">Endicott</div>
+		<div class="cell">Lincoln</div>
+		<div class="cell">Nebraska</div>
+		<div class="cell">United States</div>
+	</div>
+</div>
+
+###########################################################
+A container with only cells, no rows
+###########################################################
+
+<div class="container">
+	<div class="cell">1</div>
+	<div class="cell">Bernete</div>
+	<div class="cell">O'Scully</div>
+	<div class="cell">Beausejour</div>
+	<div class="cell">Manitoba</div>
+	<div class="cell">Canada</div>
+	<div class="cell">2</div>
+	<div class="cell">Catherin</div>
+	<div class="cell">Yon</div>
+	<div class="cell">Huntington</div>
+	<div class="cell">West Virginia</div>
+	<div class="cell">United States</div>
+	<div class="cell">3</div>
+	<div class="cell">Deni</div>
+	<div class="cell">Bushell</div>
+	<div class="cell">Atlanta</div>
+	<div class="cell">Georgia</div>
+	<div class="cell">United States</div>
+	<div class="cell">4</div>
+	<div class="cell">Louie</div>
+	<div class="cell">Warke</div>
+	<div class="cell">Honolulu</div>
+	<div class="cell">Hawaii</div>
+	<div class="cell">United States</div>
+	<div class="cell">5</div>
+	<div class="cell">Cheston</div>
+	<div class="cell">Endicott</div>
+	<div class="cell">Lincoln</div>
+	<div class="cell">Nebraska</div>
+	<div class="cell">United States</div>
+</div>
+
+-->
+
+		<section>
+			<h2>HTML Table</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>First name</th>
+						<th>Last name</th>
+						<th>City</th>
+						<th>State/Province</th>
+						<th>Country</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Bernete</td>
+						<td>O'Scully</td>
+						<td>Beausejour</td>
+						<td>Manitoba</td>
+						<td>Canada</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Catherin</td>
+						<td>Yon</td>
+						<td>Huntington</td>
+						<td>West Virginia</td>
+						<td>United States</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Deni</td>
+						<td>Bushell</td>
+						<td>Atlanta</td>
+						<td>Georgia</td>
+						<td>United States</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Louie</td>
+						<td>Warke</td>
+						<td>Honolulu</td>
+						<td>Hawaii</td>
+						<td>United States</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Cheston</td>
+						<td>Endicott</td>
+						<td>Lincoln</td>
+						<td>Nebraska</td>
+						<td>United States</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>CSS Flexbox</h2>
+			<div class="flexbox-container"></div>
+		</section>
+		<section>
+			<h2>CSS Grid</h2>
+			<div class="grid-container"></div>
+		</section>
+	</body>
+</html>

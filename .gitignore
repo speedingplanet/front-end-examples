@@ -29,3 +29,4 @@ experiments/*
 !experiments/add*
 !experiments/finished/
 !experiments/*.csv
+!experiments/students-list.html
