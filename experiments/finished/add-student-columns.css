@@ -31,6 +31,13 @@ input[type='radio'] + label::after {
 	flex: 1;
 }
 
+/*
+.row > div:first-child {
+	flex-grow: 0;
+	white-space: nowrap;
+}
+*/
+
 .row > div > *:not(input[type='radio'], label, button) {
 	width: 100%;
 }
