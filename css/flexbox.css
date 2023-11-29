@@ -2,6 +2,7 @@
 	border: 2px green dashed;
 	padding: 10px;
 	display: flex;
+	column-gap: 5px;
 }
 
 .item {
@@ -19,6 +20,7 @@
 }
 
 .container.combined > .item {
+	/* flex: grow shrink basis */
 	flex: 1 1;
 }
 
