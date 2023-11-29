@@ -35,19 +35,6 @@ input[type='radio'] + label::after {
 	width: 100%;
 }
 
-.label {
-	/* text-align: end; */
-}
-
 .center-button {
 	text-align: center;
-}
-
-input[type='date'] {
-	/* Tried these, they didn't work */
-	/* padding-inline-start: 0; */
-	/* align-items: start; */
-	/* display: inline-block; */
-	/* Got this from the debugger, hovering over the element and the input above */
-	padding: 1px 2px;
 }
