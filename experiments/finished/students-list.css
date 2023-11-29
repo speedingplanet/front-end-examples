@@ -1,0 +1,67 @@
+.flexbox-container > .row {
+	display: flex;
+	gap: 2px;
+	/* column-gap: 1em; */
+}
+
+.flexbox-container > .row > .cell {
+	flex: 1;
+}
+
+.flexbox-container > .row > .cell:first-child {
+	flex-basis: 2em;
+	flex-grow: 0;
+}
+
+.flexbox-container > .headers {
+	border-bottom: 4px double black;
+}
+
+.flexbox-container .cell {
+	border-right: 2px #000 solid;
+	padding: 3px;
+}
+
+.flexbox-container .row:not(.header, :first-child) {
+	border-bottom: 1px #bbb solid;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: min-content repeat(5, 1fr);
+}
+
+.grid-container .cell {
+	padding: 3px;
+}
+
+.grid-container .header {
+	border-bottom: 4px double black;
+}
+
+.grid-container .cell:not(:nth-child(6n + 1)) {
+	border-left: 1px solid gray;
+}
+
+.grid-container .cell {
+	background-color: lightblue;
+}
+
+/* .grid-container div.cell.header { */
+#id-column {
+	background-color: white;
+	font-weight: bold;
+}
+
+.grid-container .cell:nth-child(12n + 1),
+.grid-container .cell:nth-child(12n + 2),
+.grid-container .cell:nth-child(12n + 3),
+.grid-container .cell:nth-child(12n + 4),
+.grid-container .cell:nth-child(12n + 5),
+.grid-container .cell:nth-child(12n + 6) {
+	background-color: turquoise;
+}
+
+.grid-container .cell:nth-child(4) {
+	background-color: red !important;
+}
