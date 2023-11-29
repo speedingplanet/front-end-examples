@@ -20,6 +20,10 @@
 	</head>
 	<body>
 		<h1 style="text-align: center">Add a student</h1>
+		<p style="text-align: center">
+			Labels and inputs are not wrapped in divs, resulting in some awkward misalignments (drop-down
+			lists, for example)
+		</p>
 		<hr />
 		<form method="post">
 			<div class="row">
@@ -87,30 +91,34 @@
 				/>
 			</div>
 			<div class="row">
-				<label for="province">State/Province</label>
-				<select
-					name="province"
-					id="province"
-				>
-					<option value="">Please select a state</option>
-					<option value="CA">California</option>
-					<option value="GA">Georgia</option>
-					<option value="ID">Idaho</option>
-					<option value="NJ">New Jersey</option>
-					<option value="WI">Wisconsin</option>
-				</select>
-			</div>
-			<div class="row">
 				<label for="country">Country</label>
 				<select
 					name="country"
 					id="country"
+					style="display: inline-block; width: auto"
 				>
 					<option value="">Please select a country</option>
 					<option value="CA">Canada</option>
 					<option value="UK">United Kingdom</option>
 					<option value="US">United States</option>
 				</select>
+			</div>
+			<div class="row">
+				<label for="province">State</label>
+				<div>
+					<select
+						name="province"
+						id="province"
+						style="padding: 1px 2px"
+					>
+						<option value="">Please select a state</option>
+						<option value="CA">California</option>
+						<option value="GA">Georgia</option>
+						<option value="ID">Idaho</option>
+						<option value="NJ">New Jersey</option>
+						<option value="WI">Wisconsin</option>
+					</select>
+				</div>
 			</div>
 			<div class="row">
 				<div style="text-align: end">New or returning student?</div>

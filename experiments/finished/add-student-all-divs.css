@@ -17,15 +17,20 @@ input[type='radio'] + label::after {
 	margin-bottom: 5px;
 }
 
-.row > div,
-.row > label,
-.row > select,
-.row > input {
+.row > div {
 	flex: 1;
 }
 
-label {
+.row > div > *:not(input[type='radio'], label, button) {
+	width: 100%;
+}
+
+.label {
 	text-align: end;
+}
+
+.center-button {
+	text-align: center;
 }
 
 input[type='date'] {

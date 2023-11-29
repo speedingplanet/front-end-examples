@@ -1,6 +1,17 @@
 form {
-	padding: 0 20%;
+	padding: 0 5%;
 	margin-top: 10px;
+}
+
+.form-container {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.left-column,
+.right-column {
+	flex: 1;
 }
 
 label::after {
@@ -13,19 +24,23 @@ input[type='radio'] + label::after {
 
 .row {
 	display: flex;
-	gap: 10px;
 	margin-bottom: 5px;
 }
 
-.row > div,
-.row > label,
-.row > select,
-.row > input {
+.row > div {
 	flex: 1;
 }
 
-label {
-	text-align: end;
+.row > div > *:not(input[type='radio'], label, button) {
+	width: 100%;
+}
+
+.label {
+	/* text-align: end; */
+}
+
+.center-button {
+	text-align: center;
 }
 
 input[type='date'] {
