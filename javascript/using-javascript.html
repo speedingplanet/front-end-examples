@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Using JavaScript</title>
+	</head>
+	<body>
+		<h1>Using JavaScript</h1>
+		<section>
+			<h2>In-line JavaScript</h2>
+			<button id="inline-button">Inline button</button>
+			<script>
+				let button = document.querySelector('#inline-button');
+				button.addEventListener('click', () => {
+					// console.log('You clicked on the button');
+					logMessage('You clicked the inline button');
+				});
+
+				function logMessage(msg) {
+					console.log('logging:', msg);
+				}
+			</script>
+		</section>
+		<section>
+			<h2>JavaScript in a separate file</h2>
+			<button id="separate-button">Separate button</button>
+			<script src="using-javascript.js"></script>
+		</section>
+		<section>
+			<h2>Tag-level JavaScript</h2>
+			<!-- <button onclick="console.log('Tag-level JavaScript')">Tag-level button</button> -->
+			<button onclick="logMessage('Tag-level JavaScript')">Tag-level button</button>
+		</section>
+	</body>
+</html>
