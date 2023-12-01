@@ -30,3 +30,4 @@ experiments/*
 !experiments/finished/
 !experiments/*.csv
 !experiments/students-list.html
+!experiments/cities-analysis.cjs

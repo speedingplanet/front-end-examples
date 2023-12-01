@@ -51,10 +51,6 @@ addDefaults(undefined, 5); // 5
 addDefaults(1); // 11
 addDefaults(); // 10
 
-// Works
-addRest(1, 2, 3, 4, 5);
-addRest(10, undefined, 4, 8, 12);
-
 // Rest parameters
 // The "rest" of the values
 function addRest(x = 0, y = 0, ...otherParams) {
@@ -78,16 +74,10 @@ function getAllParameters(...params) {
 }
 
 getAllParameters(1, 2, 3);
-getAllParameters('John', 30, true, [
-	'a', 'b', 'c',
-]);
+getAllParameters('John', 30, true, ['a', 'b', 'c']);
 
 // config bag pattern in JS
-function addValues(config = {
-	a: 0,
-	b: 0,
-	c: 0,
-}) {
+function addValues(config = { a: 0, b: 0, c: 0 }) {
 	return config.a + config.b + config.c;
 }
 
@@ -117,9 +107,7 @@ function betterAddValues(config = defaultValues) {
 function addValuesLoop(config) {
 	let total = 0;
 	for (const key in config) {
-		if ([
-			'a', 'b', 'c',
-		].includes(key)) {
+		if (['a', 'b', 'c'].includes(key)) {
 			total += config[key];
 		}
 	}
@@ -178,12 +166,8 @@ function overloaded(x, y) {
 // This function returns an array where the two values have been added,
 // subtracted, multiplied and divided.
 function opAll(x, y) {
-	return [
-		x + y, x - y, x * y, x / y,
-	];
+	return [x + y, x - y, x * y, x / y];
 }
 
 // Using array destructuring, we can capture the output into individual variables
-const [
-	sum, difference, product, dividend,
-] = opAll(5, 10);
+const [sum, difference, product, dividend] = opAll(5, 10);

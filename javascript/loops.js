@@ -17,9 +17,7 @@ for (let y = 0; y < 10; y++) {
 	if (y === 8) break;
 }
 
-const fruits = [
-	'apples', 'bananas', 'pears', 'oranges',
-];
+const fruits = ['apples', 'bananas', 'pears', 'oranges'];
 
 // for-of good for values of an array
 // Goes over the VALUES of a data structure
@@ -77,8 +75,6 @@ for (let toople of mapFruits) {
 	console.log(`${key}: ${value}`);
 }
 
-for (const [
-	key, value,
-] of mapFruits) {
+for (const [key, value] of mapFruits) {
 	console.log(`${key}: ${value}`);
 }

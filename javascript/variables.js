@@ -71,26 +71,16 @@ console.log(todayTemplate);
 
 const aNumber = 10;
 const aLongNumber = 10_000_000_000_000_000_000;
-const aBoolean = true;
-const anArray = [
-	1, 2, 3, 4,
-];
+const aBoolean = true; // or the keyword false
+const anArray = [1, 2, 3, 4];
 anArray.push(5, 6, 7);
 
 const multiDimensionalArray = [
-	[
-		1, 2,
-	],
-	[
-		3, 4,
-	],
-	[
-		5, 6,
-	],
+	[1, 2],
+	[3, 4],
+	[5, 6],
 ];
-multiDimensionalArray.push([
-	7, 8,
-]);
+multiDimensionalArray.push([7, 8]);
 
 console.log(multiDimensionalArray[0][1]);
 
@@ -117,7 +107,6 @@ const myConstants = {
 };
 
 Object.freeze(myConstants);
-console.log(Math.PI);
 
 const aFunction = function (x, y) {
 	return x + y;

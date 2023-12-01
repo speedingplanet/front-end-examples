@@ -1,7 +1,7 @@
 {
 	"singleQuote": true,
 	"useTabs": true,
-	"printWidth": 100,
+	"printWidth": 80,
 	"bracketSameLine": false,
 	"htmlWhitespaceSensitivity": "ignore",
 	"singleAttributePerLine": true

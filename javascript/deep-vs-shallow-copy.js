@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 let people = [
 	{
 		id: 1,
@@ -112,3 +113,24 @@ if (people[1].city === 'Arkansas') {
 		'We changed deepCopyPeople[1], but it had no effect on people[1] because they point to different objects.',
 	);
 }
+
+// Levels of copying
+// Copy the reference to the array
+let refCopyArray = people;
+
+function processMyArray(someArray) {
+	// whatever
+}
+
+processMyArray(people);
+
+// New array, copy references within the array
+let spreadCopyArray = [...people];
+
+function processMyArray2(someArray) {
+	let spreadCopySomeArray = [...someArray];
+	// whatever
+}
+
+// New array, new objects within the new array
+let duplicatedArray = structuredClone(people);
