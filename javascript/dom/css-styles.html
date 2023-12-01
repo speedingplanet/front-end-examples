@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -44,7 +44,11 @@
 				console.log(`Style: ${li.innerText} [${li.style.backgroundColor}]`);
 
 				// Applied styles, read-only
-				console.log(`Computed Style: ${li.innerText} [${getComputedStyle(li).backgroundColor}]`);
+				console.log(
+					`Computed Style: ${li.innerText} [${
+						getComputedStyle(li).backgroundColor
+					}]`,
+				);
 			});
 		</script>
 	</body>

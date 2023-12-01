@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -47,10 +47,12 @@
 			</div>
 		</section>
 		<script>
-			document.getElementById('list-item').addEventListener('click', (event) => {
-				console.log('You clicked on the list item');
-				// event.stopPropagation();
-			});
+			document
+				.getElementById('list-item')
+				.addEventListener('click', (event) => {
+					console.log('You clicked on the list item');
+					// event.stopPropagation();
+				});
 
 			document.getElementById('anchor').addEventListener('click', (event) => {
 				console.log('You clicked on the anchor');
@@ -90,7 +92,7 @@
 					console.log('div: Stopping double-clicks');
 					// e.stopPropagation();
 				},
-				true
+				true,
 			);
 		</script>
 	</body>

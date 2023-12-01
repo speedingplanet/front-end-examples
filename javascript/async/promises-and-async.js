@@ -13,7 +13,10 @@ const url = 'http://api.open-notify.org/astros.json';
 function renderList(astros, destination) {
 	let list = document.createElement('ul');
 	astros.forEach((astronaut) => {
-		list.insertAdjacentHTML('beforeend', `<li>${astronaut.name} on ${astronaut.craft}</li>`);
+		list.insertAdjacentHTML(
+			'beforeend',
+			`<li>${astronaut.name} on ${astronaut.craft}</li>`,
+		);
 	});
 	destination.replaceChildren(list);
 	return list;
@@ -38,7 +41,7 @@ function fetchAsUnchainedPromise() {
 	});
 
 	let finalPromise = resultsPromise.then((results) =>
-		renderList(results.people, unchainedPromiseTarget)
+		renderList(results.people, unchainedPromiseTarget),
 	);
 
 	let errorHandlingPromise = finalPromise.catch((error) => {
@@ -106,7 +109,9 @@ let unchainedPromiseButton = document.querySelector('#btn-unchained-promise');
 let chainedPromiseButton = document.querySelector('#btn-chained-promise');
 let asyncAwaitButton = document.querySelector('#btn-async-await');
 
-let unchainedPromiseTarget = document.querySelector('#target-unchained-promise');
+let unchainedPromiseTarget = document.querySelector(
+	'#target-unchained-promise',
+);
 let chainedPromiseTarget = document.querySelector('#target-chained-promise');
 let asyncAwaitTarget = document.querySelector('#target-async-await');
 

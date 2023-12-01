@@ -59,7 +59,7 @@ function renderMovies(movies, destination) {
   <th>Director</th>
   <th>Rating</th>
   </tr>
-  </thead>`
+  </thead>`,
 	);
 	let tableBody = document.createElement('tbody');
 	for (let movie of movies) {

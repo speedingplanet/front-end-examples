@@ -73,7 +73,9 @@ class DeepContext {
 		}
 		let boundInnerFunction = innerFunction.bind(this);
 
-		console.log('\tCalling innerFunction, bound to the correct context, should succeed');
+		console.log(
+			'\tCalling innerFunction, bound to the correct context, should succeed',
+		);
 		boundInnerFunction();
 	}
 
@@ -87,7 +89,9 @@ class DeepContext {
 			console.log('\tinnerFunction: this.value is:', self.value);
 		}
 
-		console.log('\tCalling innerFunction, using the outer context, should succeed');
+		console.log(
+			'\tCalling innerFunction, using the outer context, should succeed',
+		);
 		innerFunction();
 	}
 }

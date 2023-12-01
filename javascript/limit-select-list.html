@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -54,7 +54,9 @@
 
 			selectList.addEventListener('change', (event) => {
 				let selectedOptions = event.target.selectedOptions;
-				console.log(`[change] selectedOptions.length ${selectedOptions.length}`);
+				console.log(
+					`[change] selectedOptions.length ${selectedOptions.length}`,
+				);
 				if (selectedOptions.length > 3) {
 					logMessage('[change] Cannot select more than three elements');
 					event.target.selected = false;

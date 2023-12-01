@@ -17,9 +17,7 @@ const today = new Date();
 // Strings, numbers and booleans
 const a = 10;
 
-const names = [
-	'John', 'Dan', 'Tim',
-];
+const names = ['John', 'Dan', 'Tim'];
 names.push('Andre');
 
 function scope() {

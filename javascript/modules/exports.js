@@ -6,16 +6,12 @@ console.log('Ran exports.js');
 const a = 1;
 const b = 2;
 const c = 3;
-const d = [
-	1, 2, 3,
-];
+const d = [1, 2, 3];
 
 const x = 10;
 
 // Export list
-export {
-	x, a, d
-};
+export { x, a, d };
 
 // In-line export
 // Almost like "public const y = 20"

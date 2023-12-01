@@ -9,9 +9,7 @@ class Car {
 
 	constructor(config = {}) {
 		// Could move this out of the class so it's not always re-declared:
-		let publicKeys = [
-			'make', 'model',
-		];
+		let publicKeys = ['make', 'model'];
 		for (let key of publicKeys) {
 			this[key] = config[key];
 		}

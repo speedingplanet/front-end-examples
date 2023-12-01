@@ -8,7 +8,9 @@ function generateAPromiseThat(result) {
 		} else if (result === false || result === 'fails') {
 			reject('Failed!');
 		} else {
-			return Date.now() % 2 ? resolve('Random Success!') : reject('Random Failure!');
+			return Date.now() % 2
+				? resolve('Random Success!')
+				: reject('Random Failure!');
 		}
 	});
 }
@@ -20,7 +22,7 @@ let initialPromise = generateAPromiseThat('random');
 // Success and failure
 initialPromise.then(
 	(result) => console.log(`Resolved with ${result}`),
-	(error) => console.error(`Failed with ${error}`)
+	(error) => console.error(`Failed with ${error}`),
 );
 
 // Chained success and failure
@@ -29,10 +31,12 @@ initialPromise
 	.catch((error) => console.log('Chained fail'));
 
 // Standalone
-generateAPromiseThat('fails')
-	.catch((error) => console.error('Something went wrong'));
-generateAPromiseThat('succeeds')
-	.then((result) => console.log('Only a success callback'));
+generateAPromiseThat('fails').catch((error) =>
+	console.error('Something went wrong'),
+);
+generateAPromiseThat('succeeds').then((result) =>
+	console.log('Only a success callback'),
+);
 
 let chainedResultsPromise = generateAPromiseThat(true);
 

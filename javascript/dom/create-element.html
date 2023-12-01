@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -74,7 +74,10 @@
 			target.appendChild(p);
 
 			// All-in-one with insertAdjacentHTML
-			target.insertAdjacentHTML('beforeend', '<p>Added by <code>insertAdjacentHTML</code></p>');
+			target.insertAdjacentHTML(
+				'beforeend',
+				'<p>Added by <code>insertAdjacentHTML</code></p>',
+			);
 		</script>
 	</body>
 </html>

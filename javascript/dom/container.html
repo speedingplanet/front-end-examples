@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -41,9 +41,13 @@
 					<div>
 						<button id="add-element">Add an element</button>
 						<br />
-						<button id="replace-element-iah">Replace content (insertAdjacentHTML)</button>
+						<button id="replace-element-iah">
+							Replace content (insertAdjacentHTML)
+						</button>
 						<br />
-						<button id="replace-element-ce">Replace content (createElement)</button>
+						<button id="replace-element-ce">
+							Replace content (createElement)
+						</button>
 						<br />
 						<button id="create-list">Create a list</button>
 						<br />
@@ -66,7 +70,13 @@
 
 			let replaceListButton = document.querySelector('#replace-list');
 			replaceListButton.addEventListener('click', () => {
-				let vegetables = ['broccoli', 'spinach', 'zucchini', 'carrots', 'potatoes'];
+				let vegetables = [
+					'broccoli',
+					'spinach',
+					'zucchini',
+					'carrots',
+					'potatoes',
+				];
 				let vegetablesList = [];
 				for (let vegetable of vegetables) {
 					let item = document.createElement('li');
@@ -81,7 +91,8 @@
 			let replaceButtonCE = document.querySelector('#replace-element-ce');
 			replaceButtonCE.addEventListener('click', () => {
 				let replacementParagraph = document.createElement('p');
-				replacementParagraph.textContent = 'Replacement (via document.createElement)';
+				replacementParagraph.textContent =
+					'Replacement (via document.createElement)';
 				let container = document.querySelector('#container');
 				container.replaceChildren(replacementParagraph);
 			});
@@ -90,7 +101,10 @@
 			replaceButtonIAH.addEventListener('click', () => {
 				let container = document.querySelector('#container');
 				container.replaceChildren();
-				container.insertAdjacentHTML('afterbegin', '<p>Replacement (via insertAdjacentHTML)</p>');
+				container.insertAdjacentHTML(
+					'afterbegin',
+					'<p>Replacement (via insertAdjacentHTML)</p>',
+				);
 			});
 
 			let addButton = document.querySelector('#add-element');

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -100,33 +100,47 @@
 		</main>
 
 		<script>
-			document.getElementById('add-button').addEventListener('click', (event) => {
-				document.getElementById('add-item').classList.add('red');
-				event.target.disabled = true;
-			});
+			document
+				.getElementById('add-button')
+				.addEventListener('click', (event) => {
+					document.getElementById('add-item').classList.add('red');
+					event.target.disabled = true;
+				});
 
-			document.getElementById('remove-button').addEventListener('click', (event) => {
-				document.getElementById('remove-item').classList.remove('underline');
-				event.target.disabled = true;
-			});
+			document
+				.getElementById('remove-button')
+				.addEventListener('click', (event) => {
+					document.getElementById('remove-item').classList.remove('underline');
+					event.target.disabled = true;
+				});
 
-			document.getElementById('replace-button').addEventListener('click', (event) => {
-				document.getElementById('replace-item').classList.replace('border-green', 'border-blue');
-				event.target.disabled = true;
-			});
+			document
+				.getElementById('replace-button')
+				.addEventListener('click', (event) => {
+					document
+						.getElementById('replace-item')
+						.classList.replace('border-green', 'border-blue');
+					event.target.disabled = true;
+				});
 
-			document.getElementById('toggle-button').addEventListener('click', (event) => {
-				document.getElementById('toggle-item').classList.toggle('red');
-			});
+			document
+				.getElementById('toggle-button')
+				.addEventListener('click', (event) => {
+					document.getElementById('toggle-item').classList.toggle('red');
+				});
 
-			document.getElementById('reset-button').addEventListener('click', (event) => {
-				document.getElementById('add-item').classList.remove('red');
-				document.getElementById('remove-item').classList.add('underline');
-				document.getElementById('replace-item').classList.replace('border-blue', 'border-green');
-				document
-					.querySelectorAll('.btn-group-vertical>button')
-					.forEach((button) => (button.disabled = false));
-			});
+			document
+				.getElementById('reset-button')
+				.addEventListener('click', (event) => {
+					document.getElementById('add-item').classList.remove('red');
+					document.getElementById('remove-item').classList.add('underline');
+					document
+						.getElementById('replace-item')
+						.classList.replace('border-blue', 'border-green');
+					document
+						.querySelectorAll('.btn-group-vertical>button')
+						.forEach((button) => (button.disabled = false));
+				});
 		</script>
 	</body>
 </html>

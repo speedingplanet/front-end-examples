@@ -18,7 +18,7 @@ let p3 = p2.then(
 	(error) => {
 		console.error('p2 rejected with an error:', error.message);
 		throw error; // Allows error to be seen down the chain
-	}
+	},
 );
 
 p3.then(
@@ -27,5 +27,5 @@ p3.then(
 	},
 	(error) => {
 		console.error(`p3 rejected with an error message of [${error.message}]`);
-	}
+	},
 );

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -156,9 +156,9 @@
 			}
 			let form = document.getElementById('validation-form');
 			form.addEventListener('focusout', (event) => {
-				event.target.parentElement.querySelector('.validity-state').textContent = getValidityState(
-					event.target.validity
-				);
+				event.target.parentElement.querySelector(
+					'.validity-state',
+				).textContent = getValidityState(event.target.validity);
 				event.target.classList.replace('untouched', 'touched');
 			});
 
@@ -169,7 +169,9 @@
 			});
 
 			el.addEventListener('invalid', () => {
-				el.setCustomValidity('Please enter a capital letter, followed by one or more letters');
+				el.setCustomValidity(
+					'Please enter a capital letter, followed by one or more letters',
+				);
 			});
 
 			let dateField = document.getElementById('v-date');

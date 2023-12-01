@@ -99,6 +99,9 @@ const firstStateWithN = states.find((state) => state.includes('N'));
 // The argument function is referred to as an accumulator
 // Tallies values left-to-right
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-let total = numbers.reduce((runningTotal, currentItem) => runningTotal + currentItem, 0);
+let total = numbers.reduce(
+	(runningTotal, currentItem) => runningTotal + currentItem,
+	0,
+);
 
 // Array.prototype.reduceRight() is also available, which tallies values right-to-left

@@ -8,7 +8,9 @@ function manualEvents() {
 		.addEventListener('click', () => console.log('You clicked on manual/two'));
 	document
 		.getElementById('manual-three')
-		.addEventListener('click', () => console.log('You clicked on manual/three'));
+		.addEventListener('click', () =>
+			console.log('You clicked on manual/three'),
+		);
 	document
 		.getElementById('manual-four')
 		.addEventListener('click', () => console.log('You clicked on manual/four'));
@@ -21,8 +23,8 @@ function loopedEvents() {
 
 	for (let itemCounter = 0; itemCounter < listItems.length; itemCounter++) {
 		listItems[itemCounter].addEventListener('click', () =>
-		// eslint-disable-next-line comma-dangle
-			console.log(`You clicked on looped/${itemCounter + 1}`)
+			// eslint-disable-next-line comma-dangle
+			console.log(`You clicked on looped/${itemCounter + 1}`),
 		);
 	}
 

@@ -3,9 +3,7 @@ class Vehicle {
 	model = '';
 
 	constructor(config) {
-		let publicKeys = [
-			'make', 'model',
-		];
+		let publicKeys = ['make', 'model'];
 		for (let key of publicKeys) {
 			if (config[key]) this[key] = config[key];
 		}
@@ -35,9 +33,7 @@ class Car extends Vehicle {
 
 	constructor(config = {}) {
 		super(config);
-		let publicKeys = [
-			'color', 'year',
-		];
+		let publicKeys = ['color', 'year'];
 		for (let key of publicKeys) {
 			if (config[key]) this[key] = config[key];
 		}

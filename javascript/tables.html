@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -82,41 +82,51 @@
 							<td colspan="2">Averages:</td>
 						</tr>
 						<tr>
-							<td colspan="4"><button id="summarize-button">Summarize</button></td>
+							<td colspan="4">
+								<button id="summarize-button">Summarize</button>
+							</td>
 						</tr>
 					</tfoot>
 				</table>
 			</section>
 		</main>
 		<script>
-			document.querySelector('#summarize-button').addEventListener('click', (event) => {
-				let table = event.target.closest('table');
-				let winCells = table.querySelectorAll('tbody td:nth-child(3)');
-				let lossCells = table.querySelectorAll('tbody td:nth-child(4)');
-				let wins = [];
-				let losses = [];
+			document
+				.querySelector('#summarize-button')
+				.addEventListener('click', (event) => {
+					let table = event.target.closest('table');
+					let winCells = table.querySelectorAll('tbody td:nth-child(3)');
+					let lossCells = table.querySelectorAll('tbody td:nth-child(4)');
+					let wins = [];
+					let losses = [];
 
-				// Assumes there are equal counts of wins and losses
-				for (let x = 0; x < winCells.length; x++) {
-					wins.push(winCells[x].textContent);
-					losses.push(lossCells[x].textContent);
-				}
+					// Assumes there are equal counts of wins and losses
+					for (let x = 0; x < winCells.length; x++) {
+						wins.push(winCells[x].textContent);
+						losses.push(lossCells[x].textContent);
+					}
 
-				let totalWins = wins.reduce((runningTotal, value) => runningTotal + Number(value), 0);
-				let totalLosses = losses.reduce((runningTotal, value) => runningTotal + Number(value), 0);
+					let totalWins = wins.reduce(
+						(runningTotal, value) => runningTotal + Number(value),
+						0,
+					);
+					let totalLosses = losses.reduce(
+						(runningTotal, value) => runningTotal + Number(value),
+						0,
+					);
 
-				let averageWins = totalWins / wins.length;
-				let averageLosses = totalLosses / losses.length;
+					let averageWins = totalWins / wins.length;
+					let averageLosses = totalLosses / losses.length;
 
-				let firstFooterRow = table.querySelector('tfoot>tr');
-				firstFooterRow.replaceChildren();
-				firstFooterRow.insertAdjacentHTML(
-					'afterbegin',
-					`<td colspan="2">Averages:</td>
+					let firstFooterRow = table.querySelector('tfoot>tr');
+					firstFooterRow.replaceChildren();
+					firstFooterRow.insertAdjacentHTML(
+						'afterbegin',
+						`<td colspan="2">Averages:</td>
           <td>${averageWins}</td>
-          <td>${averageLosses}</td>`
-				);
-			});
+          <td>${averageLosses}</td>`,
+					);
+				});
 		</script>
 	</body>
 </html>

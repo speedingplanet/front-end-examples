@@ -53,7 +53,10 @@ function useInsertAdjacentHTML() {
 
 	const list = document.createElement('ul');
 	for (let movie of movies) {
-		list.insertAdjacentHTML('beforeEnd', `<li>${movie.title} (${movie.year})</li>`);
+		list.insertAdjacentHTML(
+			'beforeEnd',
+			`<li>${movie.title} (${movie.year})</li>`,
+		);
 	}
 
 	/*

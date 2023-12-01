@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -73,22 +73,31 @@
 			let textField = document.getElementById('text-field');
 			let textButton = document.getElementById('text-button');
 
-			textButton.addEventListener('click', () => logMessage(textField.value, 'button-log'));
+			textButton.addEventListener('click', () =>
+				logMessage(textField.value, 'button-log'),
+			);
 
 			textField.addEventListener('keydown', (e) =>
-				logMessage(`${e.key} / ${e.keyCode} / ${e.target.value}`, 'keydown-log')
+				logMessage(
+					`${e.key} / ${e.keyCode} / ${e.target.value}`,
+					'keydown-log',
+				),
 			);
 			textField.addEventListener('input', (e) =>
-				logMessage(`${e.data} / ${e.target.value}`, 'input-log')
+				logMessage(`${e.data} / ${e.target.value}`, 'input-log'),
 			);
-			textField.addEventListener('change', () => logMessage(textField.value, 'change-log'));
+			textField.addEventListener('change', () =>
+				logMessage(textField.value, 'change-log'),
+			);
 
 			function logMessage(message, destination) {
 				// document.getElementById(destination).innerHTML += message + '<br>';
 				// document.getElementById(destination).textContent = message;
 
 				// But the best way to do this:
-				document.getElementById(destination).insertAdjacentHTML('beforeend', `${message}<br/>`);
+				document
+					.getElementById(destination)
+					.insertAdjacentHTML('beforeend', `${message}<br/>`);
 				// The first argument to insertAdjacentHTML can be any of
 				//   * 'beforebegin',
 				//   * 'afterbegin',
